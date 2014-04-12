@@ -83,6 +83,7 @@ class shutil
 
     static function splitPath(inputpath : string) : string[] {
         var result = [] : string[];
+        var matchRoot = /^([a-zA-Z]:\\|\/)$/;
         while (true)
         {
             result.splice(0, 0, path.basename(inputpath));
@@ -91,7 +92,7 @@ class shutil
             {
                 break;
             }
-            else if (parent == '/')
+            else if (matchRoot.test(parent))
             {
                 result.splice(0, 0, parent);
                 break;
