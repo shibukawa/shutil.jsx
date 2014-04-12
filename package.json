@@ -1,6 +1,6 @@
 {
   "name": "shutil.jsx",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "High level file/directory operation methods.",
   "scripts": {
     "build": "./node_modules/.bin/grunt build",
